@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -10,11 +11,29 @@ class PostController extends Controller
 
 
 
-    public function add(){
+    public function login(){
 
-        $posts =Post::all();
+        return view('login.login');
 
-        return view('dashboard',['posts'=>$posts->reverse()]);
+    }
+
+
+    public function add(Request $request){
+
+        if(User::all()->where('password',$request->password)){
+            
+            $posts =Post::all();
+
+            return view('dashboard',['posts'=>$posts->reverse()]);
+        }
+
+        else{
+            return view('login');
+
+
+        }
+
+
 
 
     }
@@ -49,6 +68,10 @@ class PostController extends Controller
 
 
     public function show(){
+
+        // $jDate = Jalalian::fromCarbon(Carbon::now());
+        // $date = \Morilog\Jalali\Jalalian::now();
+
 
         $posts =Post::all();
         return view('all',['posts'=>$posts->reverse()]);

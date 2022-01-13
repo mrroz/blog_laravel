@@ -20,7 +20,7 @@
         </nav>
         <nav class="menu-container" id="menu">
             <ul class="header-menu ">
-                <li class="header-menu-item"><a class="header-menu-item-link" href="#app"> خرید </a></li>
+                <li class="header-menu-item">   <a class="header-menu-item-link" href="{{route('post.login')}}"> ورود </a></li>
                 <li class="header-menu-item"><a class="header-menu-item-link" href="#app"> خرید </a></li>
                 <li class="header-menu-item"><a class="header-menu-item-link" href="#app"> رهن و اجاره </a></li>
                 <li class="header-menu-item" onclick="openNav()"><a class="header-menu-item-link"
@@ -51,11 +51,12 @@
 
         <section class="item-img">
             <section class="img-slider fade">
+                <img src="../img/img1.jpg" alt="a">
 
-                <img src="{{asset($post->file)}}" alt="{{$post->title}}">
             </section>
             <section class="img-slider fade">
-                <img src="../img/img2.jpg" alt="a">
+                <img src="{{asset($post->file)}}" alt="{{$post->title}}">
+
 
             </section>
             <section class="img-slider fade">

@@ -19,12 +19,14 @@ use App\Http\Controllers\PostController;
 // })->name('post.add');
 
 
+Route::get('/login',[PostController::class,'login'])->name('post.login');
+
 Route::get('/add',[PostController::class,'add'])->name('post.add');
 
-Route::get('V1/posts',[PostController::class,'show'])->name('post.show');
+Route::get('/posts',[PostController::class,'show'])->name('post.show');
 
- Route::post('V1/posts',[PostController::class,'create'])->name('post.create');
+ Route::post('/posts',[PostController::class,'create'])->name('post.create');
 
- Route::get('V1/posts/{post}',[PostController::class,'delete'])->name('post.delete');
+ Route::get('/posts/{post}',[PostController::class,'delete'])->name('post.delete');
 
 

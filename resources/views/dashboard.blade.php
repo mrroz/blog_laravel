@@ -48,11 +48,13 @@
              <article class="app-item">
 
                  <section class="item-img">
+                    <img src="../img/img2.jpg" alt="a">
+
                      <section class="img-slider fade">
-                         <img src="{{asset($post->file)}}" alt="{{$post->title}}">
                      </section>
                      <section class="img-slider fade">
-                         <img src="../img/img2.jpg" alt="a">
+                         <img src="{{asset($post->file)}}" alt="{{$post->title}}">
+
 
                      </section>
                      <section class="img-slider fade">
@@ -68,6 +70,7 @@
                          <section class="item-caption">
                              <ul>
                                  <li class="price">شماره : {{$key+1}} </li>
+                                 <li class="price">تاريخ : {{$post->created_at}} </li>
                                  <li class="price"> {{$post->price}} تومان </li>
                                  <li class="area">{{$post->address}}</li>
                                  <li class="type">{{$post->type}}</li>

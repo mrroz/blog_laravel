@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "shabnam";
+    src: url("../font/Shabnam.eot");
+    src: url("../font/Shabnam.woff") format("woff");
+    src: url("../font/Shabnam.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shabnam;
+}
+
+.container {
+    width: 300px;
+    height: 500px;
+    background-color: oldlace;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: center;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.container img {
+    width: 80px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s;
+}
+
+.container img:hover {
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+form {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+input[type="password"] {
+    margin-bottom: 10px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .3s;
+}
+
+input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+input[type="button"]:hover {
+    background-color: darkorange;
+}
+
+hr {
+    border-top: 1px solid green;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
